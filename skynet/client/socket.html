@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>test socket</title>
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+	<script>
+		$(function(){
+
+
+		var  wsServer = 'ws://127.0.0.1:8888'; 
+		var  websocket = new WebSocket(wsServer); 
+		websocket.onopen = function (evt) { onOpen(evt) }; 
+		websocket.onclose = function (evt) { onClose(evt) }; 
+		websocket.onmessage = function (evt) { onMessage(evt) }; 
+		websocket.onerror = function (evt) { onError(evt) }; 
+		function onOpen(evt) { 
+			$("#msg").html("Connected to WebSocket server."); 
+		} 
+		function onClose(evt) { 
+			$("#msg").html("Disconnected"); 
+		} 
+		function onMessage(evt) { 
+			$("#msg").html('Retrieved data from server: ' + evt.data); 
+		} 
+		function onError(evt) { 
+			$("#msg").html('Error occured: ' + evt.data); 
+		}
+});
+	</script>
+</head>
+<body>
+	<h1>
+		Test Socket
+	</h1>
+
+	<div>
+		<p>
+			<span id="msg"></span>
+
+		</p>
+
+	</div>
+</body>
+</html>

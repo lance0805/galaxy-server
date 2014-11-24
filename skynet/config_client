@@ -1,0 +1,14 @@
+root = "/home/hyl/workspace/skynet/"
+skynetRoot="/home/hyl/libs/skynet/"
+thread = 8
+logger = nil
+logpath = "."
+harbor = 0
+start = "main_client"	
+bootstrap = "snlua bootstrap"	-- The service for bootstrap
+lua_path=skynetRoot.."lualib/?.lua"
+luaservice=skynetRoot.."service/?.lua;"..root.."service/?.lua;"
+snax = skynetRoot.."service/?.lua;"..root.."service/?.lua;"
+lualoader = skynetRoot.."lualib/loader.lua"
+lua_cpath=skynetRoot.."luaclib/?.so"
+cpath = skynetRoot.."cservice/?.so"
