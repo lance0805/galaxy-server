@@ -1,4 +1,4 @@
-root = "/home/hyl/workspace/skynet/"
+root = "/home/hyl/workspace/galaxy-server/"
 skynetRoot="/home/hyl/libs/skynet/"
 thread = 8
 logger = nil
